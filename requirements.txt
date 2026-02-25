@@ -1,3 +1,4 @@
+# try pip3 if pip is not working
 pip install openai-whisper
 pip install sounddevice
 pip install scipy
