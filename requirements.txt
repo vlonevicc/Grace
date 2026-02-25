@@ -1,0 +1,7 @@
+pip install openai-whisper
+pip install sounddevice
+pip install scipy
+pip install pyttsx3
+pip install openai
+pip install numpy
+brew install ffmpeg
