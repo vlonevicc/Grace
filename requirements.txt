@@ -5,4 +5,9 @@ pip install scipy
 pip install pyttsx3
 pip install openai
 pip install numpy
+pip install python-dotenv
 brew install ffmpeg
+
+# create .env file and put the key there
+OPENAI_API_KEY=your_api_key_here
+# create a .gitignore file and add .env to it
