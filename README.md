@@ -12,19 +12,30 @@ A Python-based voice assistant that can capture audio, transcribe speech using O
 ## Installation
 
 ### 1. Create python 3.11 venv
-- brew install python@3.11
-- python3.11 -m venv venv
+```bash
+brew install python@3.11
+python3.11 -m venv venv
+source grace_env/bin/activate
+```
 
 ### 2. Install python dependencies
-- pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+```
 
 ### 3. Install system dependencies
-- brew install ffmpeg
+```bash
+brew install ffmpeg
+```
 
 ### 3. Set Up Environment Variables 
 - Create a `.env` file in the root directory
 - Add your OpenAI API key to the `.env` file
 - Add your venv into the `.env` file
+```
+OPENAI_API_KEY=your_api_key_here
+venv/
+```
 
 ### 4. Installation Issues
    - Try using `pip3` instead of `pip`
