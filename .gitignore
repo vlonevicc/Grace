@@ -1,2 +1,4 @@
-# Ignore the .env file to prevent sensitive information from being committed
+# Ignore the .env file and virtual environment
 .env
+grace_env/
+venv/
