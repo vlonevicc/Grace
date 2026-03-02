@@ -15,7 +15,7 @@ A Python-based voice assistant that can capture audio, transcribe speech using O
 ```bash
 brew install python@3.11
 python3.11 -m venv venv
-source grace_env/bin/activate
+source venv/bin/activate
 ```
 
 ### 2. Install python dependencies
