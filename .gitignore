@@ -1,4 +1,5 @@
 # Ignore the .env file and virtual environment
 .env
 grace_env/
+roary_env/
 venv/
