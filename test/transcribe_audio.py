@@ -6,6 +6,8 @@ from scipy.io.wavfile import write
 import pyttsx3
 from dotenv import load_dotenv
 import os
+import pvporcupine
+import pyaudio
 import warnings
 
 warnings.filterwarnings("ignore", category=UserWarning)
