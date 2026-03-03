@@ -1,7 +1,11 @@
 import whisper
+from openai import OpenAI
 import sounddevice as sd
-from scipy.io.wavfile import write
-import openai
-import pyttsx3
 import numpy as np
+from scipy.io.wavfile import write
+import pyttsx3
+from dotenv import load_dotenv
 import os
+import pvporcupine
+import pyaudio
+import warnings
