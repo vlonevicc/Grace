@@ -1,41 +1,30 @@
 from dotenv import load_dotenv
 from openai import OpenAI
+from transcribe_audio import transcribe_audio2
+import pyttsx3
+
 load_dotenv()
 client = OpenAI()
+engine = pyttsx3.init()
+
+# text to speech 
+def voice(text):
+    engine.say(text)
+    engine.runAndWait()
+
 
 def generate_response():
     # input given after transcribed
-
-    userInput = "Hey, my name is Keh"
-    #
+    userInput = transcribe_audio2()
+    # sending response to gpt
     response = client.responses.create(
         model="gpt-4.1-mini",
         input=f"Kindly respond to this message in a conversational manner:\n{userInput}"
     )
-
+    # prints response in terminal & out loud
     answer = response.output_text
     print(answer)
+    voice(answer)
 
     return answer
 generate_response()
-
-# Load environment variables from .env file
-#load_dotenv()
-
-# Get the OpenAI API key
-# openai_api_key = os.getenv("OPENAI_API_KEY")
-
-# client = OpenAI(api_key=openai_api_key)
-
-# try:
-#     response = client.responses.create(
-#         model="gpt-4.1-mini",
-#         input="hello",
-#         max_output_tokens=20
-#     )
-
-#     print("API key is valid and working!")
-#     print("Response:", response.output_text)
-
-# except Exception as e:
-#     print(f"API key test failed with error: {e}")
