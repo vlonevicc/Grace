@@ -2,6 +2,9 @@ import whisper
 import sounddevice as sd
 import numpy as np
 from scipy.io.wavfile import write
+import pyttsx3
+from dotenv import load_dotenv
+import os
 import warnings
 
 warnings.filterwarnings("ignore", category=UserWarning)

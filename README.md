@@ -26,14 +26,16 @@ pip install -r requirements.txt
 ### 3. Install system dependencies
 ```bash
 brew install ffmpeg
+brew install portaudio
 ```
 
 ### 3. Set Up Environment Variables 
 - Create a `.env` file in the root directory
-- Add your OpenAI API key to the `.env` file
+- Add your API keys to the `.env` file
 - Add your venv into the `.env` file
 ```
 OPENAI_API_KEY=your_api_key_here
+PORCUPINE_ACCESS_KEY=your_key
 venv/
 ```
 
