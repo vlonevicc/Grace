@@ -12,7 +12,6 @@ def voice(text):
     engine.say(text)
     engine.runAndWait()
 
-
 def generate_response():
     # input given after transcribed
     userInput = transcribe_audio2()
@@ -28,3 +27,5 @@ def generate_response():
 
     return answer
 generate_response()
+
+#this is just to commit
