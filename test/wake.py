@@ -13,7 +13,7 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 # Load Whisper model
-model = whisper.load_model("base", device="cpu")
+model = whisper.load_model("tiny", device="cpu")
 
 # Load TTS engine
 engine = pyttsx3.init()
