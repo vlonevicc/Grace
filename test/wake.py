@@ -143,7 +143,9 @@ def main():
             if transcribed_text:
                 speak_response(transcribed_text)
                 break
-
+    except KeyboardInterrupt:
+            pass
+    
     finally:
         pa.terminate()
 
