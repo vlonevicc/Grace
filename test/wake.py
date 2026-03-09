@@ -24,7 +24,6 @@ SILENCE_DURATION = 2.5
 
 # audio recording 
 SAMPLE_RATE = 16000
-RECORDING_SECONDS = 30
 
 load_dotenv()
 
