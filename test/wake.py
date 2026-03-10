@@ -1,3 +1,4 @@
+from email.mime import text
 import whisper
 from openai import OpenAI
 import numpy as np
@@ -15,12 +16,9 @@ warnings.filterwarnings("ignore", category=UserWarning)
 # Load Whisper model
 model = whisper.load_model("tiny", device="cpu")
 
-# Load TTS engine
-engine = pyttsx3.init()
-
 # constants for silence detection
 SILENCE_THRESHOLD = 600
-SILENCE_DURATION = 2.5
+SILENCE_DURATION = 2.0
 
 # audio recording 
 SAMPLE_RATE = 16000
@@ -123,11 +121,12 @@ def record_audio(pa, chunk_size, sample_rate=SAMPLE_RATE, silence_duration=SILEN
 
     return result["text"]
 
-def speak_response(text):    
+def speak_response(text):  
+    # Load TTS engine
+    engine = pyttsx3.init()  
     engine.say(text)
     engine.runAndWait()
     engine.stop()
-    
 
 def main():
 
@@ -139,9 +138,9 @@ def main():
             if listen_for_wake_word(pa):
                 transcribed_text = record_audio(pa, chunk_size=512)
 
-            if transcribed_text:
-                speak_response(transcribed_text)
-                break
+                if transcribed_text:
+                    speak_response(transcribed_text)
+                
     except KeyboardInterrupt:
             pass
     
