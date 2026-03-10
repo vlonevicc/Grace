@@ -1,4 +1,3 @@
-from email.mime import text
 import whisper
 from openai import OpenAI
 import numpy as np
