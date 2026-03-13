@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 # sample rate
 sample_rate = 16000
-seconds = 10
+seconds = 5
 chunk_size = 1024
 
 model = whisper.load_model("base", device="cpu")
