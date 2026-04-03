@@ -159,7 +159,7 @@ def generate_response(userInput):
 
 
 def main():
-
+    start_mouth()
     pa = pyaudio.PyAudio()
 
     try:
