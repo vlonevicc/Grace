@@ -11,6 +11,7 @@ import wave
 import pvporcupine
 import pyaudio
 import warnings
+from simulator2_execute import start_mouth, stop_mouth, set_talking, set_listening
 
 
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -129,10 +130,12 @@ def record_audio(pa, chunk_size, sample_rate=SAMPLE_RATE, silence_duration=SILEN
 
 # text to speech 
 def voice(text):
+    set_talking()
     engine = pyttsx3.init()
     engine.say(text)
     engine.runAndWait()
     engine.stop()
+    set_listening()
 
 def generate_response(userInput):
 
